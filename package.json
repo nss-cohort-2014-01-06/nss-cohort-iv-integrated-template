@@ -22,6 +22,7 @@
     "grunt-contrib-watch":  "*",
     "mocha":                "*",
     "chai" :                "*",
+    "superagent":           "*",
     "supertest":            "*"
   }
 }
