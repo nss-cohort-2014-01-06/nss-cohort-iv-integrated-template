@@ -3,13 +3,14 @@
 var dbname = process.env.DBNAME;
 var port = process.env.PORT || 4000;
 
-var express = require('express');
-var app = express();
-var less = require('express-less');
-var RedisStore = require('connect-redis')(express);
-var initMongo = require('./lib/init-mongo');
+var express    = require('express');
+var less       = require('express-less');
+var session    = require('express-session');
+var RedisStore = require('connect-redis')(session);
+var initMongo  = require('./lib/init-mongo');
 var initRoutes = require('./lib/init-routes');
 
+var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 

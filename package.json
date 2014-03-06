@@ -6,14 +6,16 @@
     "start": "node app/app.js"
   },
   "dependencies": {
-    "express":       "*",
-    "lodash":        "*",
-    "moment":        "*",
-    "mongodb":       "*",
-    "bcrypt":        "*",
-    "connect-redis": "*",
-    "jade":          "*",
-    "express-less":  "*"
+    "express":         "*",
+    "lodash":          "*",
+    "moment":          "*",
+    "mongodb":         "*",
+    "bcrypt":          "*",
+    "connect-redis":   "*",
+    "jade":            "*",
+    "express-less":    "*",
+    "request":         "*",
+    "express-session": "*"
   },
   "devDependencies": {
     "grunt":                "*",
