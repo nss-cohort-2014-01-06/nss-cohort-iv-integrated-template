@@ -1,9 +1,17 @@
 {
-  "name": "application-name",
+  "name": "name-of-application",
+  "repository" : {
+    "type" : "git",
+    "url"  : "http://github.com/USERNAME/NAME-OF-REPO.git"
+  },
   "version": "0.0.1",
+  "bin": {"coveralls" : "./node_modules/coveralls/bin/coveralls.js"},
   "private": true,
   "scripts": {
-    "start": "node app/app.js"
+    "start"     : "node app/app.js",
+    "test"      : "mocha --recursive test",
+    "testwatch" : "mocha -w --recursive test",
+    "coveralls" : "./node_modules/mocha/bin/mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
   },
   "dependencies": {
     "express":         "*",
@@ -25,7 +33,15 @@
     "mocha":                "*",
     "chai" :                "*",
     "superagent":           "*",
-    "supertest":            "*"
+    "supertest":            "*",
+    "coveralls":            "*",
+    "mocha-lcov-reporter":  "*",
+    "blanket":              "*"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "/app/"
+    }
   }
 }
 
